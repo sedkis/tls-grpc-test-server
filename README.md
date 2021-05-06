@@ -14,8 +14,9 @@ we can then curl it from the command line.
 
 3. then, use grpcurl to request data from the server.
 ```bash
-$ grpcurl -proto route_guide.proto -d '{"latitude": 413628156, "longitude":-749015468}' tls-grpc-test-server:10000 routeguide.RouteGuide/GetFeature
+$ grpcurl -insecure -proto route_guide.proto -d '{"latitude": 413628156, "longitude":-749015468}' tls-grpc-test-server:10000 routeguide.RouteGuide/GetFeature
 ```
+We give it "insecure" flag because of the self-signed certificates. 
 
 Response:
 ```json
