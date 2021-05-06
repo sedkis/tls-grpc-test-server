@@ -1,7 +1,7 @@
 # tls-grpc-test-server
 
 
-## Start
+## From Source
 
 1. To run, simply run:
 ```
@@ -27,4 +27,18 @@ Response:
        "longitude": -749015468
      }
    }
+```
+
+
+## Docker
+
+To build and run a docker image:
+```
+$ docker build -t sedkis/tls-grpc-test-server:1.0.0 .
+```
+
+Run:
+```
+$ docker run --rm -p 10000:10000 sedkis/tls-grpc-test-server:1.0.0         
+2021/05/06 20:22:40 TLS ON.
 ```
